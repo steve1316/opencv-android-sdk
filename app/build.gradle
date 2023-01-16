@@ -1,0 +1,44 @@
+import android.annotation.SuppressLint
+
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("maven-publish")
+}
+
+android {
+    namespace = "com.steve1316.opencv_android_sdk"
+    compileSdk = 31
+
+    defaultConfig {
+        minSdk = 24
+        @SuppressLint("OldTargetApi")
+                targetSdk = 31
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = "com.github.steve1316"
+                artifactId = "opencv_android_sdk"
+                version = "4.7.0"
+            }
+        }
+    }
+}
+
+dependencies {
+}

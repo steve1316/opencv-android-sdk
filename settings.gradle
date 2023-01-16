@@ -1,0 +1,3 @@
+rootProject.name = "OpenCV Android SDK"
+include ':app'
+include ':opencv'
