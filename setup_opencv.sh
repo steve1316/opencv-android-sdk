@@ -25,13 +25,11 @@ fi
 echo "[SUCCESS] Finished downloading OpenCV ${opencv_version} and verified its file location."
 
 # Now unzip the contents and move them to its required location.
-echo "[INFO] Extracting the OpenCV4Android.zip from the downloaded file into a temp/ folder."
+echo "[INFO] Extracting the contents of the OpenCV4Android.zip from the downloaded file into a temp/ folder."
 unzip -qqo ${file_name} -d temp/
-echo "[INFO] Unzipping the OpenCV4Android.zip file into the temp/opencv/ folder."
-unzip -qqo "temp/OpenCV4Android.zip" -d temp/opencv/
 
-echo "[INFO] Now copying sdk files from the temp/opencv/ folder to a opencv/ folder."
-cp -r temp/opencv/OpenCV-android-sdk/sdk/ opencv/
+echo "[INFO] Now copying sdk files from the temp/OpenCV-android-sdk/sdk/ folder to a opencv/ folder."
+cp -r temp/OpenCV-android-sdk/sdk/ opencv/
 
 # Finally, run its gradle and clean up the temp/ folder.
 echo "[INFO] Now running OpenCV's gradle..."
