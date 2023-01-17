@@ -29,7 +29,7 @@ echo "[INFO] Extracting the contents of the OpenCV4Android.zip from the download
 unzip -qqo ${file_name} -d temp/
 
 echo "[INFO] Now copying sdk files from the temp/OpenCV-android-sdk/sdk/ folder to a opencv/ folder."
-cp -r temp/OpenCV-android-sdk/sdk/ opencv/
+cp -r temp/OpenCV-android-sdk/sdk/* opencv/
 
 # Finally, run its gradle and clean up the temp/ folder.
 echo "[INFO] Now running OpenCV's gradle..."
