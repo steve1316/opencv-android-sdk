@@ -33,8 +33,8 @@ mkdir -p opencv/
 cp -r temp/OpenCV-android-sdk/sdk/* opencv/
 
 # Finally, run its gradle and clean up the temp/ folder.
-echo "[INFO] Now running OpenCV's gradle..."
-echo "android { lintOptions { abortOnError false } }" >> opencv/build.gradle
+# echo "[INFO] Now running OpenCV's gradle..."
+# echo "android { lintOptions { abortOnError false } }" >> opencv/build.gradle
 
 echo "[SUCCESS] OpenCV setup complete. Cleaning up now..."
 rm -rf temp
