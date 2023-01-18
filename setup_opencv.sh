@@ -28,9 +28,9 @@ echo "[SUCCESS] Finished downloading OpenCV ${opencv_version} and verified its f
 echo "[INFO] Extracting the contents of the OpenCV4Android.zip from the downloaded file into a temp/ folder."
 unzip -qqo ${file_name} -d temp/
 
-echo "[INFO] Now copying sdk files from the temp/OpenCV-android-sdk/sdk/ folder to a opencv/ folder."
-mkdir -p opencv/
-cp -r temp/OpenCV-android-sdk/sdk/* opencv/
+echo "[INFO] Now copying sdk files from the temp/OpenCV-android-sdk/sdk/ folder to a app/ folder."
+mkdir -p app/
+cp -r temp/OpenCV-android-sdk/sdk/* app/
 
 # Finally, run its gradle and clean up the temp/ folder.
 # echo "[INFO] Now running OpenCV's gradle..."
