@@ -18,6 +18,6 @@ dependencies {
 }
 ```
 
-The actual downloading and compiling of the OpenCV Android SDK is handled by the `setup_opencv.sh` file which is executed before generating the artifacts in the `jitpack.yml` file.
+The actual downloading and compiling of the OpenCV Android SDK is handled by the `setup_opencv.sh` file which is executed before generating the artifacts in the `jitpack.yml` file when requesting for a new build on Jitpack.
 
 Second and most important, this repo is imported into the [Automation Library](https://github.com/steve1316/android-cv-automation-library) which is then propagated to every other project under it that will use it.
