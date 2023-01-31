@@ -14,7 +14,7 @@ allprojects {
 // App-level build.gradle
 dependencies {
     // OpenCV Android SDK for image processing.
-    implementation("com.github.steve1316:opencv-android-sdk:4.7.0")
+    implementation("com.github.steve1316:opencv-android-sdk:Tag")
 }
 ```
 
