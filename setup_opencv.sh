@@ -13,7 +13,7 @@ if [[ $1 = "--skip-download" ]]; then
 else
     echo "[INFO] Preparing to download ${file_name} from its GitHub release link..."
     echo "[INFO] Now downloading from: ${download_url}"
-    wget -c -O ${file_name} ${download_url}
+    curl -L -C - -o ${file_name} ${download_url}
 fi
 
 # Check if file finished downloading.
