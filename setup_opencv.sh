@@ -3,7 +3,7 @@
 set -e
 
 # Adjust opencv_version to designate which OpenCV version to download.
-opencv_version="4.7.0"
+opencv_version="4.12.0"
 file_name="opencv-${opencv_version}-android-sdk.zip"
 download_url="https://github.com/opencv/opencv/releases/download/${opencv_version}/opencv-${opencv_version}-android-sdk.zip"
 
